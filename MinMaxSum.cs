@@ -21,12 +21,12 @@ class Result
      * The function accepts INTEGER_ARRAY arr as parameter.
      */
 
-    public static void miniMaxSum(List<int> arr)
+    public static void miniMaxSum(List<Int64> arr)
     {
         arr.Sort();
-        int minSum = arr.Take(4).Sum();
+        Int64 minSum = arr.Take(4).Sum();
         arr.Reverse();
-        int maxSum = arr.Take(4).Sum();
+        Int64 maxSum = arr.Take(4).Sum();
         Console.WriteLine(minSum + " " + maxSum);
     }
 
@@ -37,7 +37,7 @@ class Solution
     public static void Main(string[] args)
     {
 
-        List<int> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt32(arrTemp)).ToList();
+        List<Int64> arr = Console.ReadLine().TrimEnd().Split(' ').ToList().Select(arrTemp => Convert.ToInt64(arrTemp)).ToList();
 
         Result.miniMaxSum(arr);
     }
